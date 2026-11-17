@@ -1,0 +1,44 @@
+paths:
+  input: output/result/1-preprocess/samples.tsv
+  output: output/result/6-geography
+  figure: output/figure/6-geography
+  temp: temp/6-geography
+  frequency: output/result/2-frequency
+  distance: output/result/3-distance
+  population_order: ""
+  metadata: input/populations.tsv
+  ystr: input/ystr.tsv
+tools:
+  rscript: Rscript
+runtime:
+  jobs: 1
+  overwrite: false
+analysis:
+  levels: "1,2,3"
+  seed: 19
+  k_geo: 3
+  eps0: 1.0e-12
+  default_bar_halfwidth_deg: 0.7
+  default_bar_height_deg: 5
+  cluster_method: ward.D2
+  max_heatmap_labels: 60
+  edge_mode: threshold
+  top_edge_per_pop: 1
+  edge_min_sim: 0.7
+  max_edges: 1200
+  cons_col_for_edges: Consistency_1minusEntropy
+  curv_base: 0.35
+  curv_alpha: 1.7
+  curv_clip: 0.45
+  bezier_points: 40
+  map_x_pad: 2
+  map_y_pad: 1
+  label_pop_if_nle: 40
+  sankey_component_min_freq: 0
+  sankey_label_min_freq: 0.1
+  sankey_label_left_pad_frac: 0.12
+  sankey_label_min_height_prop: 0.06
+  map_base_height_in: 5.3
+  sankey_legend_min_show_freq: 0.05
+  sankey_legend_max_rows: 24
+  sankey_legend_max_cols: 4

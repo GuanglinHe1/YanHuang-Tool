@@ -1,4 +1,4 @@
-# README
+# YHCtool
 
 A configurable haplogroup population-analysis pipeline. All bundled sample identifiers, populations, regions, coordinates and STR values are synthetic and have no connection to real participants or locations.
 
