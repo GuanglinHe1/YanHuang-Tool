@@ -1,0 +1,24 @@
+paths:
+  input: output/result/1-preprocess/samples.tsv
+  output: output/result/4-visualization
+  figure: output/figure/4-visualization
+  temp: temp/4-visualization
+  frequency: output/result/2-frequency
+  distance: output/result/3-distance
+  metadata: input/populations.tsv
+  ystr: input/ystr.tsv
+tools:
+  rscript: Rscript
+runtime:
+  jobs: 1
+  overwrite: false
+analysis:
+  levels: "1,2,3"
+  seed: 19
+  plot_base_width: 8
+  plot_base_height: 6
+  nature_sankey_width: 8.5
+  nature_sankey_height: 5
+  multilayer_max_k: 3
+  perhap_min_freq: 0.005
+  perhap_max_plot: 25

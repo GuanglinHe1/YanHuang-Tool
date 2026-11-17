@@ -1,0 +1,18 @@
+paths:
+  input: input/samples.tsv
+  output: output/result/1-preprocess
+  figure: output/figure/1-preprocess
+  temp: temp/1-preprocess
+  frequency: output/result/2-frequency
+  distance: output/result/3-distance
+  metadata: input/populations.tsv
+  ystr: input/ystr.tsv
+tools:
+  rscript: Rscript
+runtime:
+  jobs: 1
+  overwrite: false
+analysis:
+  levels: "1,2,3"
+  seed: 19
+  use_equalize: false
